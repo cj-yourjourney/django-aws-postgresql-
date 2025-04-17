@@ -19,7 +19,7 @@ A step-by-step guide to connect an AWS RDS PostgreSQL database to a Django proje
    - Enable public access (if for dev/testing)
    - Choose or create a VPC security group that allows inbound traffic on port `5432`
 6. Under **Addtional Configuration**:
-   - ** Initial Database Name**: `my_database_name`
+   - **Initial Database Name**: `my_database_name`
 7. Click **"Create database"**
 8. After creation, copy the **endpoint** of the RDS instance  
    (e.g., `mydb.xxxxxx.us-east-1.rds.amazonaws.com`)
