@@ -9,7 +9,7 @@ A step-by-step guide to connect an AWS RDS PostgreSQL database to a Django proje
 1. Go to [AWS RDS Console](https://console.aws.amazon.com/rds)
 2. Click **"Create database"**
 3. Choose:
-   - **Engine**: PostgreSQL  
+   - **Engine**: PostgreSQL
    - **Template**: Free tier (if you're testing)
 4. Set DB settings:
    - **DB instance identifier**: `mydb`
@@ -18,8 +18,10 @@ A step-by-step guide to connect an AWS RDS PostgreSQL database to a Django proje
 5. Under **Connectivity**:
    - Enable public access (if for dev/testing)
    - Choose or create a VPC security group that allows inbound traffic on port `5432`
-6. Click **"Create database"**
-7. After creation, copy the **endpoint** of the RDS instance  
+6. Under **Addtional Configuration**:
+   - ** Initial Database Name**: `my_database_name`
+7. Click **"Create database"**
+8. After creation, copy the **endpoint** of the RDS instance  
    (e.g., `mydb.xxxxxx.us-east-1.rds.amazonaws.com`)
 
 ---
@@ -30,8 +32,8 @@ A step-by-step guide to connect an AWS RDS PostgreSQL database to a Django proje
 2. Find the security group used for the RDS instance
 3. Go to **Inbound Rules > Edit**
 4. Add a rule:
-   - **Type**: PostgreSQL  
-   - **Port**: 5432  
+   - **Type**: PostgreSQL
+   - **Port**: 5432
    - **Source**: `My IP` or `0.0.0.0/0` (⚠️ less secure — use only for testing)
 
 ---

@@ -120,3 +120,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+### ADD Your Database info
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "mydbname",  # replace with your DB name
+        "USER": "admin",  # your RDS master username
+        "PASSWORD": "mypassword",  # your RDS password
+        "HOST": "mydb.xxxxxx.us-east-1.rds.amazonaws.com",  # your RDS endpoint
+        "PORT": "5432",
+    }
+}
